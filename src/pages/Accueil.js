@@ -18,7 +18,7 @@ function Accueil() {
     <div className="text-gray-900 bg-gray-50">
       {/* Header */}
       <motion.header
-        className="py-16 text-center text-white bg-gray-800"
+        className="py-16 text-center text-white bg-gray-700"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
