@@ -1,12 +1,13 @@
 import { Menu, X } from "lucide-react";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   return (
-    <nav className="p-4 text-white bg-gray-800">
+    <nav className="relative z-50 p-4 text-white bg-gray-800">
       <div className="flex items-center justify-between mx-auto max-w-7xl">
         {/* Logo */}
         <h1 className="text-2xl font-bold">École de Formation</h1>
@@ -22,46 +23,26 @@ function Navbar() {
 
         {/* Menu */}
         <ul
-          className={`absolute md:static top-16 left-0 w-full md:w-auto bg-gray-800 md:flex space-y-4 md:space-y-0 md:space-x-6 p-6 md:p-0 transition-transform duration-300 ease-in-out ${
-            isOpen ? "translate-y-0" : "-translate-y-full md:translate-y-0"
+          className={`absolute md:static top-16 left-0 w-full md:w-auto bg-gray-800 md:flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 p-6 md:p-0 transition-all duration-300 ease-in-out ${
+            isOpen ? "block" : "hidden md:flex"
           }`}
         >
-          <li>
-            <Link
-              to="/"
-              className="block md:inline transition duration-300 hover:text-gray-400"
-              onClick={() => setIsOpen(false)}
-            >
-              Accueil
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/inscription"
-              className="block md:inline transition duration-300 hover:text-gray-400"
-              onClick={() => setIsOpen(false)}
-            >
-              Inscription
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/apropos"
-              className="block md:inline transition duration-300 hover:text-gray-400"
-              onClick={() => setIsOpen(false)}
-            >
-              À Propos
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/contact"
-              className="block md:inline transition duration-300 hover:text-gray-400"
-              onClick={() => setIsOpen(false)}
-            >
-              Contact
-            </Link>
-          </li>
+          {["/", "/inscription", "/apropos", "/contact"].map((path, index) => {
+            const labels = ["Accueil", "Inscription", "À Propos", "Contact"];
+            return (
+              <li key={index}>
+                <Link
+                  to={path}
+                  className={`block md:inline transition duration-300 hover:text-gray-400 ${
+                    location.pathname === path ? "text-blue-500" : ""
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {labels[index]}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </nav>
