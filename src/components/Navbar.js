@@ -3,7 +3,9 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
+  // Utilisation du hook useState pour gérer l'état d'ouverture du menu
   const [isOpen, setIsOpen] = useState(false);
+  // Utilisation du hook useLocation pour obtenir l'emplacement actuel
   const location = useLocation();
 
   return (
@@ -18,6 +20,7 @@ function Navbar() {
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
+          {/* Affiche l'icône X si le menu est ouvert, sinon affiche l'icône Menu */}
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
 
@@ -27,15 +30,19 @@ function Navbar() {
             isOpen ? "block" : "hidden md:flex"
           }`}
         >
+          {/* Boucle sur les chemins de navigation pour créer les liens du menu */}
           {["/", "/inscription", "/apropos", "/contact"].map((path, index) => {
+            // Labels correspondants aux chemins de navigation
             const labels = ["Accueil", "Inscription", "À Propos", "Contact"];
             return (
               <li key={index}>
                 <Link
                   to={path}
                   className={`block md:inline transition duration-300 hover:text-gray-400 ${
+                    // Ajoute une classe spéciale si le chemin actuel correspond au chemin du lien
                     location.pathname === path ? "text-blue-500" : ""
                   }`}
+                  // Ferme le menu après avoir cliqué sur un lien
                   onClick={() => setIsOpen(false)}
                 >
                   {labels[index]}
