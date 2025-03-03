@@ -28,7 +28,7 @@ function Navbar() {
         <ul
           className={`absolute md:static top-16 left-0 w-full md:w-auto bg-gray-800 md:flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 p-6 md:p-0 transition-all duration-300 ease-in-out ${
             isOpen ? "block" : "hidden md:flex"
-          }`}
+          }`} // Affiche le menu si isOpen est vrai, sinon le cache
         >
           {/* Boucle sur les chemins de navigation pour créer les liens du menu */}
           {["/", "/inscription", "/apropos", "/contact"].map((path, index) => {
@@ -36,6 +36,8 @@ function Navbar() {
             const labels = ["Accueil", "Inscription", "À Propos", "Contact"];
             return (
               <li key={index}>
+                {" "}
+                {/* Clé unique pour chaque élément de la liste */}
                 <Link
                   to={path}
                   className={`block md:inline transition duration-300 hover:text-gray-400 ${
@@ -45,7 +47,7 @@ function Navbar() {
                   // Ferme le menu après avoir cliqué sur un lien
                   onClick={() => setIsOpen(false)}
                 >
-                  {labels[index]}
+                  {labels[index]} {/* Affiche le label correspondant */}
                 </Link>
               </li>
             );
