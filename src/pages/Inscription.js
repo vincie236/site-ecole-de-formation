@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaUser, FaEnvelope, FaPhone, FaBook } from "react-icons/fa";
+import { FaBook, FaEnvelope, FaPhone, FaUser } from "react-icons/fa";
 import InscriptionImg from "../assets/img/inscription.jpg";
 
 function Inscription() {

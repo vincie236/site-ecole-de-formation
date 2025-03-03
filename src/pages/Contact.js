@@ -3,10 +3,10 @@ import ContactImg from "../assets/img/contact.jpg";
 import BackgroundVideo from "../assets/videos/texto.mp4"; // Assurez-vous d'avoir une vidéo dans ce chemin
 
 import {
-  FaUser,
+  FaCommentDots,
   FaEnvelope,
   FaRegFileAlt,
-  FaCommentDots,
+  FaUser,
 } from "react-icons/fa";
 
 const Contact = () => {
@@ -41,29 +41,29 @@ const Contact = () => {
   return (
     <div>
       {/* Header avec arriere plan en video */}
-      <header className="relative w-full h-96 overflow-hidden">
+      <header className="relative w-full overflow-hidden h-96">
         <video
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          className="absolute top-0 left-0 object-cover w-full h-full"
           src={BackgroundVideo}
           autoPlay
           loop
           muted
         />
-        <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
+        <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full bg-black bg-opacity-50">
           <h1 className="text-4xl font-bold text-white">Contactez-nous</h1>
         </div>
       </header>
       {/* fin header */}
-      <div className="p-10 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 bg-gray-100">
-        <main className="w-full p-10 sm:p-20 bg-white rounded-lg shadow-lg flex flex-col lg:flex-row">
-          <section className="w-full lg:w-1/2 pr-0 lg:pr-8 flex items-center justify-center mb-8 lg:mb-0">
+      <div className="flex items-center justify-center min-h-screen p-10 px-4 bg-gray-100 sm:px-6 lg:px-8">
+        <main className="flex flex-col w-full p-10 bg-white rounded-lg shadow-lg sm:p-20 lg:flex-row">
+          <section className="flex items-center justify-center w-full pr-0 mb-8 lg:w-1/2 lg:pr-8 lg:mb-0">
             <img
               src={ContactImg}
               alt="Contact"
               className="rounded-lg shadow-lg"
             />
           </section>
-          <section className="w-full lg:w-1/2 pl-0 lg:pl-8">
+          <section className="w-full pl-0 lg:w-1/2 lg:pl-8">
             <h2 className="mb-6 text-4xl font-bold text-center text-gray-800">
               Nous contacter
             </h2>
@@ -166,7 +166,7 @@ const Contact = () => {
               <div className="text-center">
                 <button
                   type="submit"
-                  className="w-full py-3 font-semibold text-white bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg hover:from-blue-600 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full py-3 font-semibold text-white rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   Envoyer
                 </button>

@@ -3,6 +3,7 @@ import React from "react";
 import { FaBusinessTime, FaLaptopCode, FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
+import BackgroundVideo from "../assets/videos/texto.mp4";
 
 function Accueil() {
   // Paramètres du carrousel
@@ -12,28 +13,45 @@ function Accueil() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
   };
 
   return (
     <div className="text-gray-900 bg-gray-50">
-      {/* Header */}
+      {/* Header avec vidéo en arrière-plan */}
       <motion.header
-        className="py-16 text-center text-white bg-gray-700"
+        className="relative h-screen flex items-center justify-center text-center text-white overflow-hidden"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h1 className="mb-4 text-4xl font-bold">
-          Bienvenue dans notre école de formation !
-        </h1>
-        <p className="mb-6 text-lg">
-          Offrant une éducation de qualité pour un avenir prometteur.
-        </p>
-        <Link to="/inscription">
-          <button className="px-6 py-2 text-white transition duration-300 bg-blue-600 rounded-lg hover:bg-blue-500">
-            Commencer maintenant
-          </button>
-        </Link>
+        {/* Vidéo en arrière-plan */}
+        <video
+          className="absolute top-0 left-0 object-cover w-full h-full"
+          src={BackgroundVideo}
+          autoPlay
+          loop
+          muted
+        />
+        {/* Overlay sombre pour améliorer la lisibilité du texte */}
+        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+
+        {/* Contenu superposé (texte et bouton) */}
+        <div className="relative z-20 px-4">
+          <h1 className="mb-4 text-4xl sm:text-6xl font-bold">
+            Bienvenue dans notre école de formation !
+          </h1>
+          <p className="mb-6 text-lg sm:text-xl max-w-2xl mx-auto">
+            Nous vous offrant une éducation de qualité pour un avenir
+            prometteur.
+          </p>
+          <Link to="/inscription">
+            <button className="px-6 py-2 text-white transition duration-300 bg-blue-600 rounded-lg hover:bg-blue-500">
+              Commencer maintenant
+            </button>
+          </Link>
+        </div>
       </motion.header>
 
       {/* À propos */}
@@ -118,7 +136,7 @@ function Accueil() {
               conférences et des discussions enrichissantes.
             </p>
           </div>
-          <div className="gid place-items-center">
+          <div className="grid place-items-center">
             <img
               src="/images/tech.jpg"
               alt="La femme au cœur de la technologie"
@@ -132,7 +150,6 @@ function Accueil() {
               domaine de la technologie.
             </p>
           </div>
-          {/* Nouveaux événements */}
           <div className="grid place-items-center">
             <img
               src="/images/hackaton.jpg"
@@ -147,7 +164,6 @@ function Accueil() {
               technologie.
             </p>
           </div>
-
           <div className="grid place-items-center">
             <img
               src="/images/conference.jpg"
