@@ -27,7 +27,8 @@ function Inscription() {
 
     // Regex patterns for validation
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    const phonePattern = /^[0-9]{10}$/; // Adjust phone number pattern as needed
+    const phonePattern = /^[0-9]{9}$/; // Adjust phone number pattern as needed
+    // Le 9 dans {9} signifie que le numéro de téléphone doit contenir 9 chiffres
 
     // Check if all fields are filled and valid
     if (
@@ -51,6 +52,7 @@ function Inscription() {
       }
 
       setMessage("Inscription réussie !");
+      console.log("Form Data:", formData); // Afficher les données du formulaire dans la console
     } else {
       setMessage("Veuillez remplir tous les champs correctement.");
     }
@@ -160,7 +162,7 @@ function Inscription() {
                   type="tel"
                   id="telephone"
                   name="telephone"
-                  placeholder="Ex: 06 12 34 56"
+                  placeholder="Ex: 061234567"
                   value={formData.telephone}
                   onChange={handleChange}
                   required
