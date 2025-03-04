@@ -3,7 +3,7 @@ import React from "react";
 import { FaBusinessTime, FaLaptopCode, FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
-import BackgroundVideo from "../assets/videos/texto.mp4";
+import BackgroundVideo from "../assets/videos/Accueil1.mp4";
 
 function Accueil() {
   // Paramètres du carrousel
@@ -14,14 +14,14 @@ function Accueil() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 1000,
   };
 
   return (
     <div className="text-gray-900 bg-gray-50">
       {/* Header avec vidéo en arrière-plan */}
       <motion.header
-        className="relative h-screen flex items-center justify-center text-center text-white overflow-hidden"
+        className="relative flex items-center justify-center h-screen overflow-hidden text-center text-white"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -39,10 +39,10 @@ function Accueil() {
 
         {/* Contenu superposé (texte et bouton) */}
         <div className="relative z-20 px-4">
-          <h1 className="mb-4 text-4xl sm:text-6xl font-bold">
+          <h1 className="mb-4 text-4xl font-bold sm:text-6xl">
             Bienvenue dans notre école de formation !
           </h1>
-          <p className="mb-6 text-lg sm:text-xl max-w-2xl mx-auto">
+          <p className="max-w-2xl mx-auto mb-6 text-lg sm:text-xl">
             Nous vous offrant une éducation de qualité pour un avenir
             prometteur.
           </p>
@@ -116,7 +116,7 @@ function Accueil() {
             <img
               src="/images/sport.jpg"
               alt="Journée Sportive"
-              className="mb-4 w-full h-64 object-cover"
+              className="object-cover w-full h-64 mb-4"
             />
             <h3 className="text-xl font-semibold">Journée Sportive</h3>
             <p className="text-lg">
@@ -128,7 +128,7 @@ function Accueil() {
             <img
               src="/images/women_day.jpg"
               alt="Célébration du 8 mars"
-              className="mb-4 w-full h-64 object-cover"
+              className="object-cover w-full h-64 mb-4"
             />
             <h3 className="text-xl font-semibold">Célébration du 8 mars</h3>
             <p className="text-lg">
@@ -140,7 +140,7 @@ function Accueil() {
             <img
               src="/images/tech.jpg"
               alt="La femme au cœur de la technologie"
-              className="mb-4 w-full h-64 object-cover"
+              className="object-cover w-full h-64 mb-4"
             />
             <h3 className="text-xl font-semibold">
               La femme au cœur de la technologie
@@ -154,7 +154,7 @@ function Accueil() {
             <img
               src="/images/hackaton.jpg"
               alt="Hackathon étudiant"
-              className="mb-4 w-full h-64 object-cover"
+              className="object-cover w-full h-64 mb-4"
             />
             <h3 className="text-xl font-semibold">Hackathon étudiant</h3>
             <p className="text-lg">
@@ -168,7 +168,7 @@ function Accueil() {
             <img
               src="/images/conference.jpg"
               alt="Conférence sur l'entrepreneuriat"
-              className="mb-4 w-full h-64 object-cover"
+              className="object-cover w-full h-64 mb-4"
             />
             <h3 className="text-xl font-semibold">
               Conférence sur l'entrepreneuriat
