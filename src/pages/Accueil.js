@@ -3,7 +3,7 @@ import React from "react";
 import { FaBusinessTime, FaLaptopCode, FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
-import BackgroundVideo from "../assets/videos/Accueil1.mp4";
+import BackgroundVideo from "../assets/videos/Accueil.mp4";
 
 function Accueil() {
   // Paramètres du carrousel
