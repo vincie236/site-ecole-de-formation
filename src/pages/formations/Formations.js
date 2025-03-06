@@ -4,14 +4,54 @@ import { Link, Outlet } from "react-router-dom";
 import CommerceImage from "../../assets/images/formations/commerce.jpg";
 import GestionImage from "../../assets/images/formations/gestion.jpg";
 import InformatiqueImage from "../../assets/images/formations/informatique.jpg";
+import BackgroundVideo from "../../assets/videos/formation.mp4";
 
 function Formations() {
   return (
     <div className="px-6 py-16 bg-gray-50">
-      <h1 className="mb-6 text-4xl font-bold text-center">Nos Formations</h1>
+      {/*En-tête avec vidéo en arrière-plan*/}
+      <header className="relative flex items-center justify-center min-h-screen overflow-hidden text-center text-white">
+        {/* Vidéo en arrière-plan */}
+        <video
+          src={BackgroundVideo}
+          autoPlay
+          loop
+          muted
+          className="absolute top-0 left-0 object-cover w-full h-full"
+        />
+        {/* Overlay sombre pour améliorer la lisibilité du texte */}
+        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
 
-      {/* Introduction */}
-      <section className="max-w-2xl mx-auto mb-12 text-center">
+        {/* Contenu superposé (texte et bouton) */}
+        <div className="relative z-20 px-4">
+          <h1 className="mb-4 text-4xl font-bold sm:text-6xl">
+            Nos Formations
+          </h1>
+
+          {/* Introduction */}
+          <section className="max-w-2xl mx-auto mb-12 text-center sm:text-xl">
+            <p className="max-w-2xl mx-auto mb-6 text-lg sm:text-xl">
+              Nos formations sont conçues pour répondre aux besoins des
+              étudiants et des professionnels.
+            </p>
+          </section>
+          <Link
+            to="/inscription"
+            className="px-6 py-2 text-white transition duration-300 bg-blue-600 rounded-lg hover:bg-blue-500"
+          >
+            Commencer maintenant
+          </Link>
+        </div>
+      </header>
+      {/* À propos */}
+      <section className="px-6 py-16 text-center">
+        <h2 className="mb-4 text-3xl font-semibold">
+          À propos de nos formations
+        </h2>
+        <p className="mb-4 text-lg">
+          Nous vous offrons une éducation de qualité adaptée aux exigences du
+          marché.
+        </p>
         <p className="text-lg">
           Découvrez nos formations de qualité, conçues pour répondre aux besoins
           du marché et vous préparer à des carrières passionnantes. Choisissez

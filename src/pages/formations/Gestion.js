@@ -54,6 +54,11 @@ function Gestion() {
               className="rounded-lg shadow-md"
             />
           </div>
+          <div>
+
+            <img src={GestionImage}
+            alt="Image d'une femme developpeuse"
+          </div>
           <div className="order-1 text-center md:w-1/2 md:pl-8 md:text-left md:order-2">
             <FaUsers className="mx-auto mb-4 text-4xl text-green-600 md:mx-0" />
             <h4 className="mb-4 text-2xl font-semibold">
