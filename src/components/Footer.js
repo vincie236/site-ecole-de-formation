@@ -3,35 +3,43 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-10">
-      <div className="container mx-auto px-6 md:px-12 lg:px-16">
-        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 text-center md:text-left">
+    <footer className="py-10 text-white bg-gray-900">
+      <div className="container px-6 mx-auto md:px-12 lg:px-16">
+        <div className="grid gap-8 text-center sm:grid-cols-2 md:grid-cols-3 md:text-left">
           {/* Liens utiles */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 border-b pb-2 border-gray-700">
+            <h3 className="pb-2 mb-4 text-lg font-semibold border-b border-gray-700">
               Liens utiles
             </h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="hover:text-gray-400 transition">
+                <Link to="/" className="transition hover:text-gray-400">
                   Accueil
                 </Link>
               </li>
               <li>
                 <Link
                   to="/inscription"
-                  className="hover:text-gray-400 transition"
+                  className="transition hover:text-gray-400"
                 >
                   Inscription
                 </Link>
               </li>
               <li>
-                <Link to="/apropos" className="hover:text-gray-400 transition">
+                <Link
+                  to="/formations"
+                  className="transition hover:text-gray-400"
+                >
+                  Formations
+                </Link>
+              </li>
+              <li>
+                <Link to="/apropos" className="transition hover:text-gray-400">
                   À Propos
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-gray-400 transition">
+                <Link to="/contact" className="transition hover:text-gray-400">
                   Contact
                 </Link>
               </li>
@@ -40,7 +48,7 @@ function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 border-b pb-2 border-gray-700">
+            <h3 className="pb-2 mb-4 text-lg font-semibold border-b border-gray-700">
               Contact
             </h3>
             <p className="text-gray-400">Adresse: 15 Rue Hinda Diata</p>
@@ -50,25 +58,25 @@ function Footer() {
 
           {/* Réseaux sociaux */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 border-b pb-2 border-gray-700">
+            <h3 className="pb-2 mb-4 text-lg font-semibold border-b border-gray-700">
               Suivez-nous
             </h3>
-            <div className="flex justify-center md:justify-start space-x-6">
+            <div className="flex justify-center space-x-6 md:justify-start">
               <a
                 href="https://facebook.com"
-                className="hover:text-blue-500 transition"
+                className="transition hover:text-blue-500"
               >
                 Facebook
               </a>
               <a
                 href="https://twitter.com"
-                className="hover:text-blue-400 transition"
+                className="transition hover:text-blue-400"
               >
                 Twitter
               </a>
               <a
                 href="https://linkedin.com"
-                className="hover:text-blue-300 transition"
+                className="transition hover:text-blue-300"
               >
                 LinkedIn
               </a>
@@ -78,7 +86,7 @@ function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="mt-8 border-t border-gray-700 pt-4 text-center text-gray-500 text-sm">
+      <div className="pt-4 mt-8 text-sm text-center text-gray-500 border-t border-gray-700">
         &copy; 2025 École de Formation. Tous droits réservés.
       </div>
     </footer>
