@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { FaBook, FaEnvelope, FaPhone, FaUser } from "react-icons/fa";
+import InscriptionVideo from "../assets/videos/inscript.mp4";
 import InscriptionImg from "../assets/img/inscription.jpg";
-import BackgroundVideo from "../assets/videos/Accueil2.mp4";
+// import BackgroundVideo from "../assets/videos/Accueil2.mp4";
 
 function Inscription() {
   const [formData, setFormData] = useState({
@@ -63,21 +64,21 @@ function Inscription() {
       <header className="relative w-full overflow-hidden h-96">
         <video
           className="absolute top-0 left-0 object-cover w-full h-full"
-          src={BackgroundVideo}
+          src={InscriptionVideo}
           autoPlay
           loop
           muted
         />
         <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full bg-black bg-opacity-50">
           <h1 className="text-4xl font-bold text-white">
-            Inscrivez-vous des maintenant !
+            Inscrivez-vous dès maintenant !
           </h1>
         </div>
       </header>
       {/* fin header */}
 
       {/** Contenu principal */}
-      <div className="flex items-center justify-center min-h-screen p-10 px-4 bg-gray-100 sm:px-6 lg:px-8 mt-96">
+      <div className="flex items-center justify-center min-h-screen p-10 px-4 bg-gray-100 sm:px-6 lg:px-8">
         <main className="flex flex-col w-full p-10 bg-white rounded-lg shadow-lg sm:p-20 lg:flex-row">
           {/* Section de l'image à gauche */}
           <section className="flex items-center justify-center w-full pr-0 mb-8 lg:w-1/2 lg:pr-8 lg:mb-0">
