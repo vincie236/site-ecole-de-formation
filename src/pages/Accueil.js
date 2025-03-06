@@ -14,9 +14,8 @@ function Accueil() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 3000,
   };
-
   return (
     <div className="text-gray-900 bg-gray-50">
       {/* Header avec vidéo en arrière-plan */}
@@ -75,35 +74,42 @@ function Accueil() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <div className="text-center">
             <FaLaptopCode className="mx-auto mb-2 text-4xl text-blue-600" />
-            <h3 className="mb-2 text-xl font-semibold">Informatique</h3>
-            <p>
-              Apprenez les compétences techniques essentielles pour exceller
-              dans le domaine du numérique, du développement logiciel à
-              l'administration des systèmes et réseaux. Vous serez formé pour
-              résoudre des problèmes complexes et innover dans des projets
-              technologiques.
-            </p>
+            <Link to="/formations/informatique">
+              <h3 className="mb-2 text-xl font-semibold">Informatique</h3>
+              <p>
+                Apprenez les compétences techniques essentielles pour exceller
+                dans le domaine du numérique, du développement logiciel à
+                l'administration des systèmes et réseaux. Vous serez formé pour
+                résoudre des problèmes complexes et innover dans des projets
+                technologiques.
+              </p>
+            </Link>
           </div>
           <div className="text-center">
             <FaBusinessTime className="mx-auto mb-2 text-4xl text-green-600" />
-            <h3 className="mb-2 text-xl font-semibold">Gestion</h3>
-            <p>
-              Développez vos compétences en gestion d'entreprise, stratégie, et
-              leadership. Nos formations couvrent la gestion de projet, les
-              finances, et le management, vous préparant à diriger des équipes
-              et à prendre des décisions stratégiques dans un environnement
-              professionnel dynamique.
-            </p>
+            <Link to="/formations/gestion">
+              <h3 className="mb-2 text-xl font-semibold">Gestion</h3>
+              <p>
+                Développez vos compétences en gestion d'entreprise, stratégie,
+                et leadership. Nos formations couvrent la gestion de projet, les
+                finances, et le management, vous préparant à diriger des équipes
+                et à prendre des décisions stratégiques dans un environnement
+                professionnel dynamique.
+              </p>
+            </Link>
           </div>
           <div className="text-center">
             <FaShoppingCart className="mx-auto mb-2 text-4xl text-red-600" />
-            <h3 className="mb-2 text-xl font-semibold">Commerce</h3>
-            <p>
-              Maîtrisez les stratégies de vente, de marketing et de gestion des
-              produits pour exceller dans le secteur du commerce. Apprenez à
-              analyser le marché, gérer les relations client, et concevoir des
-              stratégies efficaces pour stimuler la croissance des entreprises.
-            </p>
+            <Link to="/formations/commerce">
+              <h3 className="mb-2 text-xl font-semibold">Commerce</h3>
+              <p>
+                Maîtrisez les stratégies de vente, de marketing et de gestion
+                des produits pour exceller dans le secteur du commerce. Apprenez
+                à analyser le marché, gérer les relations client, et concevoir
+                des stratégies efficaces pour stimuler la croissance des
+                entreprises.
+              </p>
+            </Link>
           </div>
         </div>
       </section>
