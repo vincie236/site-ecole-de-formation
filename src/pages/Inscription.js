@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaBook, FaEnvelope, FaPhone, FaUser } from "react-icons/fa";
-import InscriptionVideo from "../assets/videos/inscript.mp4";
 import InscriptionImg from "../assets/img/inscription.jpg";
+import InscriptionVideo from "../assets/videos/inscript.mp4";
 // import BackgroundVideo from "../assets/videos/Accueil2.mp4";
 
 function Inscription() {
