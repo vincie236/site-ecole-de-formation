@@ -178,18 +178,16 @@ function Informatique() {
         </div>
       </section>
 
-      {/* Section Call-to-Action */}
-      <section className="text-center">
-        <h3 className="mb-4 text-3xl font-semibold">
-          Prêt à rejoindre l'aventure ?
-        </h3>
+      {/* Appel à l'action */}
+      <section className="py-16 text-center text-white bg-gray-800">
+        <h2 className="mb-4 text-3xl font-semibold">Prêt à commencer ?</h2>
         <p className="mb-6 text-lg">
-          Inscrivez-vous dès maintenant pour commencer votre formation en
-          informatique.
+          Rejoignez-nous dès aujourd&apos;hui et bénéficiez d&apos;une formation
+          de qualité.
         </p>
         <Link to="/inscription">
           <button className="px-6 py-2 text-white transition duration-300 bg-blue-600 rounded-lg hover:bg-blue-500">
-            S'inscrire maintenant
+            Inscrivez-vous maintenant
           </button>
         </Link>
       </section>
