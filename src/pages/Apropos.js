@@ -69,7 +69,7 @@ const APropos = () => {
               <img
                 src="https://randomuser.me/api/portraits/men/1.jpg"
                 alt="Membre de l'équipe"
-                className="w-32 h-32 mx-auto mb-4 rounded-full"
+                className="w-32 h-32 mb-4 rounded-full es-auto"
                 loading="lazy"
               />
               <h3 className="text-xl font-semibold">Joseph MBOUNDJI</h3>

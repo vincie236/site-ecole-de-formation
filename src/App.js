@@ -4,6 +4,9 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 // Composants importés
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import PageTransition from "./components/PageTransition";
+import ScrollToTopButton from "./components/ScrollToTopButton"; // Importez ScrollToTopButton
+//import ThemeToggle from "./components/ThemeToggle";
 
 // Chargement paresseux des pages
 const Accueil = lazy(() => import("./pages/Accueil"));
@@ -22,6 +25,11 @@ function App() {
       {/* Navbar : visible sur toutes les pages */}
       <Navbar />
 
+      {/* Bouton de bascule du mode sombre
+      <div className="flex justify-end p-4">
+        <ThemeToggle />
+      </div> */}
+
       <main>
         {/* Suspense pour le chargement paresseux des pages */}
         <Suspense
@@ -29,15 +37,50 @@ function App() {
         >
           <Routes>
             {/* Page d'accueil */}
-            <Route path="/" element={<Accueil />} />
+            <Route
+              path="/"
+              element={
+                <PageTransition>
+                  <Accueil />
+                </PageTransition>
+              }
+            />
 
             {/* Pages principales */}
-            <Route path="/inscription" element={<Inscription />} />
-            <Route path="/apropos" element={<Apropos />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route
+              path="/inscription"
+              element={
+                <PageTransition>
+                  <Inscription />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/apropos"
+              element={
+                <PageTransition>
+                  <Apropos />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/contact"
+              element={
+                <PageTransition>
+                  <Contact />
+                </PageTransition>
+              }
+            />
 
             {/* Page Formations avec sous-onglets */}
-            <Route path="/formations" element={<Formations />}>
+            <Route
+              path="/formations"
+              element={
+                <PageTransition>
+                  <Formations />
+                </PageTransition>
+              }
+            >
               <Route path="informatique" element={<Informatique />} />
               <Route path="gestion" element={<Gestion />} />
               <Route path="commerce" element={<Commerce />} />
@@ -51,6 +94,9 @@ function App() {
 
       {/* Footer : visible sur toutes les pages */}
       <Footer />
+
+      {/* Bouton "Retour en haut" */}
+      <ScrollToTopButton />
     </Router>
   );
 }
