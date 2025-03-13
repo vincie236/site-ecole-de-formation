@@ -1,3 +1,15 @@
+import {
+  BookOpen,
+  Facebook,
+  Home,
+  Info,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  Twitter,
+  UserPlus,
+} from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -13,33 +25,46 @@ function Footer() {
             </h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="transition hover:text-gray-400">
+                <Link
+                  to="/"
+                  className="flex items-center transition hover:text-gray-400"
+                >
+                  <Home className="w-5 h-5 mr-2" />
                   Accueil
                 </Link>
               </li>
               <li>
                 <Link
                   to="/inscription"
-                  className="transition hover:text-gray-400"
+                  className="flex items-center transition hover:text-gray-400"
                 >
+                  <UserPlus className="w-5 h-5 mr-2" />
                   Inscription
                 </Link>
               </li>
               <li>
                 <Link
                   to="/formations"
-                  className="transition hover:text-gray-400"
+                  className="flex items-center transition hover:text-gray-400"
                 >
+                  <BookOpen className="w-5 h-5 mr-2" />
                   Formations
                 </Link>
               </li>
               <li>
-                <Link to="/apropos" className="transition hover:text-gray-400">
-                  À Propos
+                <Link
+                  to="/apropos"
+                  className="flex items-center transition hover:text-gray-400"
+                >
+                  <Info className="w-5 h-5 mr-2" />À Propos
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="transition hover:text-gray-400">
+                <Link
+                  to="/contact"
+                  className="flex items-center transition hover:text-gray-400"
+                >
+                  <Mail className="w-5 h-5 mr-2" />
                   Contact
                 </Link>
               </li>
@@ -51,9 +76,20 @@ function Footer() {
             <h3 className="pb-2 mb-4 text-lg font-semibold border-b border-gray-700">
               Contact
             </h3>
-            <p className="text-gray-400">Adresse: 15 Rue Hinda Diata</p>
-            <p className="text-gray-400">Email: contact@gmail.com</p>
-            <p className="text-gray-400">Téléphone: +242 06 123 4567</p>
+            <div className="space-y-2">
+              <p className="flex items-center text-gray-400">
+                <MapPin className="w-5 h-5 mr-2" />
+                Adresse: 15 Rue Hinda Diata
+              </p>
+              <p className="flex items-center text-gray-400">
+                <Mail className="w-5 h-5 mr-2" />
+                Email: contact@gmail.com
+              </p>
+              <p className="flex items-center text-gray-400">
+                <Phone className="w-5 h-5 mr-2" />
+                Téléphone: +242 06 123 4567
+              </p>
+            </div>
           </div>
 
           {/* Réseaux sociaux */}
@@ -64,20 +100,23 @@ function Footer() {
             <div className="flex justify-center space-x-6 md:justify-start">
               <a
                 href="https://facebook.com"
-                className="transition hover:text-blue-500"
+                className="flex items-center transition hover:text-blue-500"
               >
+                <Facebook className="w-5 h-5 mr-2" />
                 Facebook
               </a>
               <a
                 href="https://twitter.com"
-                className="transition hover:text-blue-400"
+                className="flex items-center transition hover:text-blue-400"
               >
+                <Twitter className="w-5 h-5 mr-2" />
                 Twitter
               </a>
               <a
                 href="https://linkedin.com"
-                className="transition hover:text-blue-300"
+                className="flex items-center transition hover:text-blue-300"
               >
+                <Linkedin className="w-5 h-5 mr-2" />
                 LinkedIn
               </a>
             </div>
