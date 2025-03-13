@@ -198,15 +198,16 @@ function Inscription() {
                 >
                   Formation souhaitée :
                 </label>
-                <div className="flex items-center mt-2">
-                  <FaBook className="absolute ml-3 text-gray-400" />
+                <div className="relative flex items-center mt-2">
+                  <FaBook className="absolute ml-3 text-gray-400 " />
                   <select
                     id="formation"
                     name="formation"
                     value={formData.formation}
                     onChange={handleChange}
                     required
-                    className="w-full p-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    appearence-none
+                    className="z-10 w-full p-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   >
                     <option value="">Sélectionnez une formation</option>
                     <option value="dev_web">Développement Web</option>
