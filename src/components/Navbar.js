@@ -36,18 +36,18 @@ function Navbar() {
           }`} // Affiche le menu si isOpen est vrai, sinon le cache
         >
           {/* Onglets de navigation */}
-          {["/", "/apropos", "/inscription", "/contact"].map((path, index) => {
+          {["/", "/formations", "/apropos", "/contact"].map((path, index) => {
             // Labels correspondants aux chemins de navigation
-            const labels = ["Accueil", "À Propos", "Inscription", "Contact"];
+            const labels = ["Accueil", "Formations", "À Propos", "Contact"];
             return (
               <li key={index} className="relative">
                 {" "}
                 {/* Clé unique pour chaque élément de la liste */}
-                {path === "/apropos" ? (
-                  // Menu déroulant pour "À Propos"
+                {path === "/formations" ? (
+                  // Menu déroulant pour "Formations"
                   <div className="cursor-pointer">
                     <div className="flex items-center">
-                      {/* Lien vers "À Propos" */}
+                      {/* Lien vers "Formations" */}
                       <Link
                         to={path}
                         className={`transition duration-300 hover:text-gray-400 ${
@@ -80,14 +80,14 @@ function Navbar() {
                     {isDropdownOpen && (
                       <div className="absolute left-0 w-48 mt-2 bg-gray-800 rounded-lg shadow-lg animate-slideDown">
                         <Link
-                          to="/formations"
+                          to="/inscription"
                           className="block px-4 py-3 text-sm text-white hover:bg-gray-700"
                           onClick={() => {
                             setIsOpen(false);
                             setIsDropdownOpen(false);
                           }}
                         >
-                          Formations
+                          Inscription
                         </Link>
                       </div>
                     )}
