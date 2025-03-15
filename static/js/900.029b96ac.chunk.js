@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksite_ecole_de_formation=self.webpackChunksite_ecole_de_formation||[]).push([[900],{1900:(e,t,s)=>{s.r(t),s.d(t,{default:()=>a});s(5043);var c=s(579);const a=function(){return(0,c.jsxs)("div",{className:"text-center py-20",children:[(0,c.jsx)("h1",{className:"text-4xl font-bold text-red-500",children:"Oups !"}),(0,c.jsx)("p",{className:"mt-4 text-lg",children:"La page que vous cherchez est introuvable."})]})}}}]);
+//# sourceMappingURL=900.029b96ac.chunk.js.map
